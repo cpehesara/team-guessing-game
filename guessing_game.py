@@ -1,5 +1,7 @@
 import random 
-while True: 
+import timer
+while True:
+    start_time = time.time()  
     number = random.randint(1, 75) 
     #change the range from 1 - 75
     print("Guess a number between 1 and 75") 
@@ -15,3 +17,4 @@ while True:
         print("Play again? (y/n)") 
         if input().lower() != 'y': 
             break
+    print(f"Time taken: {time.time() - start_time:.2f}s")
